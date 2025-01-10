@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Basics</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        article {
+            background-color: #e9ecef;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to HTML5</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+    </ul>
+</nav>
+
+<section id="section1">
+    <h2>Section 1: Introduction to HTML5</h2>
+    <p>HTML5 is the latest version of the Hypertext Markup Language, the code that describes web pages.</p>
+    <article>
+        <h3>Key Features of HTML5</h3>
+        <ul>
+            <li>New semantic elements (e.g., <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>)</li>
+            <li>Improved support for multimedia (audio and video)</li>
+            <li>Canvas for drawing graphics</li>
+            <li>Form enhancements (new input types, attributes)</li>
+        </ul>
+    </article>
+</section>
+
+<section id="section2">
+    <h2>Section 2: Multimedia</h2>
+    <h3>Audio Example</h3>
+    <audio controls>
+        <source src="audio/sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video Example</h3>
+    <video width="320" height="240" controls>
+        <source src="video/sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section id="section3">
+    <h2>Section 3: Forms</h2>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2023 HTML5 Basics</p>
+</footer>
+
+</body>
+</html>

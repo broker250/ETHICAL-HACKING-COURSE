@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An overview of HTML5 essentials.">
+    <meta name="keywords" content="HTML5, web development, tutorial">
+    <meta name="author" content="HAHIRWA Obisalem">
+    <title>HTML5 Essentials</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header, footer {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        main {
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            margin: 20px 0;
+        }
+        video, audio {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HTML5 Essentials</h1>
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#semantic">Semantic Elements</a></li>
+                    <li><a href="#media">Multimedia</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#apis">HTML5 APIs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>HTML5 is the latest version of the HTML standard. It introduces new elements, attributes, and APIs to enhance web development. It focuses on improving semantic structure, multimedia, and interactivity.</p>
+        </section>
+
+        <section id="semantic">
+            <h2>Semantic Elements</h2>
+            <p>Semantic elements provide better structure and meaning to web content. Examples include:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code></li>
+                <li><code>&lt;footer&gt;</code></li>
+                <li><code>&lt;article&gt;</code></li>
+                <li><code>&lt;section&gt;</code></li>
+                <li><code>&lt;nav&gt;</code></li>
+                <li><code>&lt;aside&gt;</code></li>
+                <li><code>&lt;main&gt;</code></li>
+            </ul>
+        </section>
+
+        <section id="media">
+            <h2>Multimedia</h2>
+            <p>HTML5 introduces native support for audio and video:</p>
+            <h3>Video Example</h3>
+            <video controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                <p>Your browser does not support HTML5 video.</p>
+            </video>
+
+            <h3>Audio Example</h3>
+            <audio controls>
+                <source src="sample-audio.mp3" type="audio/mpeg">
+                <p>Your browser does not support HTML5 audio.</p>
+            </audio>
+        </section>
+
+        <section id="forms">
+            <h2>Forms</h2>
+            <p>HTML5 enhances forms with new input types and attributes:</p>
+            <form action="submit.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date"><br><br>
+
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color"><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="apis">
+            <h2>HTML5 APIs</h2>
+            <p>HTML5 includes JavaScript APIs for interactive features. Examples:</p>
+            <ul>
+                <li>Geolocation API</li>
+                <li>Canvas API for 2D graphics</li>
+                <li>Web Storage (localStorage and sessionStorage)</li>
+                <li>Web Workers for background tasks</li>
+            </ul>
+            <h3>Geolocation Example</h3>
+            <button onclick="getLocation()">Get Location</button>
+            <p id="location-output"></p>
+
+            <script>
+                function getLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition((position) => {
+                            document.getElementById('location-output').textContent = `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+                        });
+                    } else {
+                        document.getElementById('location-output').textContent = 'Geolocation is not supported by this browser.';
+                    }
+                }
+            </script>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HAHIRWA Obisalem. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
